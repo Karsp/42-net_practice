@@ -42,3 +42,40 @@ This project has given me a solid foundation in networking, but there's always m
 
 ---
 
+Hello students! These are the notes that helped me with this project.
+
+### My Notes
+
+- Default (on RT) has to point to next interface ip.
+- There are couple of ways to calculate the number of hosts per subnet:
+
+   *- Subtract between the last number on the mask and 255. Add 1 (because it start counting on 0).*
+
+   With mask: 				255.255.255.192
+
+   Total Number of Hosts: 		255 - 192 + 1 (count .0)  = 64
+
+   Number of Usable Hosts: 	TNH - 2 = 62
+
+   Usable Host IP Range for network:		128.248.100.1
+
+| **Network Address** | **Usable Host Range**           | **Broadcast Address**  |
+|---------------------|---------------------------------|------------------------|
+| 128.248.100.0       | 128.248.100.1 - 128.248.100.62  | 128.248.100.63         |
+| 128.248.100.64      | 128.248.100.65 - 128.248.100.126| 128.248.100.127        |
+| 128.248.100.128     | 128.248.100.129 - 128.248.100.190| 128.248.100.191       |
+| 128.248.100.192     | 128.248.100.193 - 128.248.100.254| 128.248.100.255       |
+
+
+- Find the network address 
+Apply the mask to the IP address through a [bitwise AND](https://en.wikipedia.org/wiki/Bitwise_operation#AND)
+- Check if two ips are part of the same network
+Apply a bitwise XOR to the IPs address 
+Apply the mask to the IP address through a [bitwise AND](https://en.wikipedia.org/wiki/Bitwise_operation#AND)
+Look for any 1 in the result, if there is one, they are not part of the same subnet.
+
+#### Checks
+- Check fixed data first.
+- Always check the defaults for typos.
+- Always copy and paste the network address and change the hostname.
+- Sometimes RT doesn't allow defaults.
