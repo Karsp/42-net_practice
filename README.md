@@ -1,4 +1,4 @@
-Hello Recruiter! I've prepared this project brief for you.
+👋 Hello **Recruiter!** I've prepared this project brief for you.
 
 ---
 
@@ -47,7 +47,7 @@ This project has given me a solid foundation in networking, but there's always m
 
 
 
-Hello students! These are the notes that helped me with this project.
+👋 Hello **students!** These are the notes that helped me with this project.
 
 ---
 
